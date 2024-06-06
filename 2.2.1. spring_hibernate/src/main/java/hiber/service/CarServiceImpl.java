@@ -5,14 +5,15 @@ import hiber.model.Car;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 @Service
-public class CarServiceImp implements CarService {
+public class CarServiceImpl implements CarService{
     private CarDao carDao;
+
     @Autowired
-    public CarServiceImp(CarDao carDao) {
+    public CarServiceImpl(CarDao carDao) {
         this.carDao = carDao;
     }
+
     @Override
     public void addCar(Car car) {
         carDao.addCar(car);
